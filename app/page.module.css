@@ -1,0 +1,20 @@
+.pdf{
+  width: 100%;
+  background-color: rgb(247 245 238);
+  padding: 5rem 0;
+}
+.title{
+  font-size: 3rem;
+  text-align: center;
+  font-family: Tiempos,serif;
+}
+
+.content{
+  margin: 0 auto;
+}
+
+.content p {
+  max-width: 32rem;
+  text-align: center;
+  margin: 20px auto 0;
+}

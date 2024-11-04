@@ -1,0 +1,38 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  height: 70px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  /* font-family: Tiempos,serif; */
+}
+
+.logo_title{
+  font-size: 20px;
+  font-weight: 600;
+}
+.link{
+}
+
+.link ul {
+  list-style: none;
+  display: flex;
+}
+.link li {
+  padding: 10px;
+  font-weight: 500;
+}
+.link a {
+  font-size: 16px;
+  color: #000;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,47 @@
+.footer{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1280px;
+  margin: 60px auto 40px;
+}
+
+.left {
+  display: flex;
+  
+  flex-direction: column;
+
+}
+.left div {
+  margin-bottom: 20px;
+  vertical-align: middle;
+}
+.logo_icon svg{
+  fill: rgb(156 163 175);
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.logo_icon svg:hover{
+  fill: rgb(107 114 128);
+}
+
+.desc{
+  max-width: 30rem;
+}
+.right{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.right ul{
+  list-style: none;
+}
+
+.right li{
+  margin-top: 20px;
+}
+.item a:hover{
+  color:rgb(17 24 39);
+}

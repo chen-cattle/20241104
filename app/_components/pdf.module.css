@@ -1,0 +1,125 @@
+
+.upload{
+  max-width: fit-content;
+  margin: 30px auto 0;
+  background-color: #fff;
+  border: 1px dashed #000;
+  border-radius: 8px;
+
+}
+
+.upload_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 275px;
+  height: 350px;
+}
+.loading{
+  
+  width: 275px;
+  height: 350px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.book{
+  width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.single{
+  position: relative;;
+  padding: .75rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.single:hover{
+background-color: #ffffffa5;
+}
+
+.current{
+  text-align: center;
+  margin-top: 5px;
+}
+.leftTop{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255 97 47);
+  fill: #fff;
+  box-sizing: border-box;
+  padding: .3rem;
+  border-radius: 50%;
+}
+
+.tools{
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+  margin: 40px auto;
+}
+
+.rotate{
+  background-color: rgb(255, 97, 47);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  height: 42px;
+}
+
+.rotate:hover{
+  background-color: rgb(255, 97, 47) !important;
+  color: #fff!important;
+  border-color: rgb(255, 97, 47)!important;
+}
+.remove, .download{
+  background-color: rgb(31 41 55);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  height: 42px;
+}
+.remove:hover, .download:hover{
+  background-color: rgb(31 41 55)!important;
+  color: #fff!important;
+
+}
+
+
+.download{
+  background-color: rgb(255, 97, 47) !important;
+  display: flex;
+  margin: 30px auto;
+}
+.download:hover{
+  background-color: rgb(255, 97, 47) !important;
+  border-color:  rgb(255, 97, 47) !important;
+
+}
+.circle{
+  width: 42px;
+  height: 42px;
+}
+
+.circle:hover{
+  border-color: #d9d9d9!important;
+  color: rgba(0,0,0,0.88)!important;
+}
