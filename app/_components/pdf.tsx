@@ -25,6 +25,9 @@ export default function Pdf() {
     setLoading(true);
     console.log(e.file.originFileObj);
     setFile(e.file.originFileObj);
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
 
 
   };
@@ -75,9 +78,7 @@ export default function Pdf() {
     setNumPages(nextNumPages);
     
     setPagesConfig([...Array.from(new Array(nextNumPages), () => ({rotate: 0}))])
-    setTimeout(() => {
-      setLoading(false)
-    }, 1000)
+
     
   }
   return (
@@ -119,7 +120,7 @@ export default function Pdf() {
       </div>
     }
      {
-      pagesConfig && !loading && <Document file={file} onLoadSuccess={onDocumentLoadSuccess} >
+      pagesConfig && !loading && <Document renderMode="canvas" file={file} onLoadSuccess={onDocumentLoadSuccess} >
       <div className={styled.book}>
      {pagesConfig.map((_el, index) => (
               <SinglePage onClick={() => handlePageClick(index)} index={index + 1} key={index}>
@@ -131,6 +132,7 @@ export default function Pdf() {
                     key={`page_${index + 1}`}
                     pageNumber={index + 1}
                     width={containerWidth}
+                    renderTextLayer={false}
                     // height={240}
                   />
                 </div>
