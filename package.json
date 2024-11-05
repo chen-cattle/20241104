@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-pdf/renderer": "^4.0.0",
     "antd": "^5.21.6",
     "next": "15.0.2",
     "pdf-lib": "^1.17.1",

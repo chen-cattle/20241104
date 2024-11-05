@@ -1,4 +1,5 @@
 import styled from "./footer.module.css";
+import Image from 'next/image';
 
 export default function Footer() {
   const data = [
@@ -70,7 +71,7 @@ export default function Footer() {
     <footer className={styled.footer}>
       <div className={styled.left}>
         <div>
-          <img src='/favicon.ico' alt={''} width={20} height={20}></img>
+          <Image src='/favicon.ico' alt={''} width={20} height={20}></Image>
         </div>
         <div className={styled.desc}>
           Chat with any PDF: ask questions, get summaries, find information, and

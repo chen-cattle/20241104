@@ -2,7 +2,7 @@
 
 import { Button, Spin, Tooltip, Upload } from 'antd';
 import styled from './pdf.module.css'
-import {use, useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { degrees, PDFDocument } from 'pdf-lib';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
@@ -71,11 +71,10 @@ export default function Pdf() {
     setPagesConfig([...pagesConfig]);
   }
   
-  function onDocumentLoadSuccess({ numPages: nextNumPages }: any): void {
-    console.log('-----------------pdf加载完成');
+  function onDocumentLoadSuccess({ numPages: nextNumPages }: { numPages: number }): void {
     setNumPages(nextNumPages);
     
-    setPagesConfig([...Array.from(new Array(nextNumPages), (_) => ({rotate: 0}))])
+    setPagesConfig([...Array.from(new Array(nextNumPages), () => ({rotate: 0}))])
     setTimeout(() => {
       setLoading(false)
     }, 1000)
@@ -147,7 +146,11 @@ export default function Pdf() {
   );
 }
 
-function SinglePage(props: any) {
+function SinglePage(props: {
+  onClick?: () => void;
+  children?: ReactNode | ReactNode[];
+  index?: number;
+}) {
   return (
     <div className={styled.single}
     onClick={props.onClick}
