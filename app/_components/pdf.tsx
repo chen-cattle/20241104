@@ -98,7 +98,7 @@ export default function Pdf() {
       </Upload>   
       </div>
     }
-    { file &&
+    { file && !loading &&
       <div className={styled.tools}>
         <Tooltip>
           <Button  onClick={handleRotate} className={styled.rotate}>Rotate all</Button>
@@ -119,7 +119,7 @@ export default function Pdf() {
       </div>
     }
      {
-      pagesConfig && <Document file={file} onLoadSuccess={onDocumentLoadSuccess} >
+      pagesConfig && !loading && <Document file={file} onLoadSuccess={onDocumentLoadSuccess} >
       <div className={styled.book}>
      {pagesConfig.map((_el, index) => (
               <SinglePage onClick={() => handlePageClick(index)} index={index + 1} key={index}>
@@ -140,7 +140,7 @@ export default function Pdf() {
              </div>
      </Document>
      }
-     {file && <Tooltip title="split and download pdf"><Button onClick={handleDownload} className={styled.download}>Download</Button></Tooltip>}
+     {file && !loading && <Tooltip title="split and download pdf"><Button onClick={handleDownload} className={styled.download}>Download</Button></Tooltip>}
      
      </>
   );
